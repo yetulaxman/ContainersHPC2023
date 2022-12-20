@@ -33,7 +33,7 @@ author: CSC Training
 
 <p>
   <div style="float: left; width: 50%;">
-   <img src="./slides/img/EuroCC_Logo_invert.png" width=110 align=middle/>
+   <img src="./EuroCC_Logo_invert.png" width=110 align=middle/>
    <p><small>
      This project has received funding from the European High-Performance Computing Joint Undertaking (JU) under grant agreement No 951732.
       </small>
