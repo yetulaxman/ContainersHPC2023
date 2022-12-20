@@ -1,0 +1,15 @@
+title: Containers and Workflows in Bioinformatics
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+   hands-on:
+        output: true
+
+defaults:
+  -
+    scope:
+      path: "_hands-on"
+    values:
+      layout: "default"
