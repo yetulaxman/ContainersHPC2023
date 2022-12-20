@@ -3,29 +3,46 @@ title: Containers and Workflows in Bioinformatics
 author: CSC Training
 ---
 
-# Course material for _Containers and Workflows in Bioinformatics_ 
+# Course material for _Bioinformatics analysis with containers_ 
 
 {% assign items = site.hands-on |  sort: "title" %}
 
 
-## 1.  Introduction to CSC HPC environment and containers
+## 2.1 Introduction to docker containers 
 
-### 1.3 Tutorials and exercises
+###  Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'containers' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
 
-## 2. Using Pre-existing Images for Bioapplications
+## 2.2 Conversion of docker containers to apptainer
 
-### 2.3 Tutorials and exercises
+### Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'bioapplications' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
 
+## 2.3 Containerized bioapplications
+
+### Tutorials and exercises
+{% for hands-on in items %}
+{% if hands-on.topic == 'bioapplications' %}
+1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
+{% endif %}
+{% endfor %}
+
+## 2.4 Workflows at CSC
+
+###  Tutorials and exercises
+{% for hands-on in items %}
+{% if hands-on.topic == 'bioapplications' %}
+1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
+{% endif %}
+{% endfor %}
 
 
 ## Information
