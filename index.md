@@ -17,11 +17,11 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## 2.2 Conversion of docker containers to apptainer
+## 2.2 Using pre-existing docker containers in HPC environement
 
 ### Tutorials and exercises
 {% for hands-on in items %}
-{% if hands-on.topic == 'bioapplications' %}
+{% if hands-on.topic == 'conversion' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
