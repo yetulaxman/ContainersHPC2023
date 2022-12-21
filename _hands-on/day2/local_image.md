@@ -1,6 +1,6 @@
 ---
 topic: containers
-title: Tutorial2 -  Converting of local Docker images to singularity 
+title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
 We have earlier converted Docker images from registries to corresponding singularity images in the previous tutorials. Sometimes, the images may not be readily available in image registries for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. This tutorial explains how to build a singularity image from a local docker image in play-with-docker environment. 
