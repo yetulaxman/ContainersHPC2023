@@ -8,7 +8,6 @@ Running and managing workflows for bioinformatics applications can be challengin
  - Workflow management
  - Reproducibility
  - Portability
- - Scalability
  - Parallelization
  - Easy prototyping 
  - Partial resumption
