@@ -1,5 +1,5 @@
 ---
-title: Containers and Workflows in Bioinformatics
+title: Bioinformatic Analysis with Containers
 author: CSC Training
 ---
 
