@@ -1,6 +1,6 @@
 ---
 topic: nextflow
-title: Tutorial5 - Run nf-core pipeline with hyperqueue executor
+title: Tutorial3 (bonus) - Run nf-core pipeline with hyperqueue executor
 ---
 
 nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data.  In this tutorial we use HyperQueue executor instead of 'local' or 'slurm' executor.
