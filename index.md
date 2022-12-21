@@ -39,7 +39,7 @@ author: CSC Training
 
 ###  Tutorials and exercises
 {% for hands-on in items %}
-{% if hands-on.topic == 'bioapplications' %}
+{% if hands-on.topic == 'workflows' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
