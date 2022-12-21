@@ -9,7 +9,7 @@ author: CSC Training
 
 
 ## 2.1 Introduction to docker containers 
-
+### [Slides: Converting docker images to singularity images](https://a3s.fi/containers-workflows/docker2singularity.html)
 ###  Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'containers' %}
@@ -27,7 +27,7 @@ author: CSC Training
 {% endfor %}
 
 ## 2.3 Containerized bioapplications
-
+###  Slides:Containerised bio applications](https://a3s.fi/containers-workflows/bioapplications.html)
 ### Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'bioapplications' %}
