@@ -36,7 +36,7 @@ author: CSC Training
 {% endfor %}
 
 ## 2.4 Workflows at CSC
-
+### [Slides: Introduction to workflows with nextflow](https://a3s.fi/csc-training/workflows_workshop.html)
 ###  Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'nextflow' %}
