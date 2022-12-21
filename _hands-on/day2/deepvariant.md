@@ -1,6 +1,6 @@
 ---
 topic: bioapplications
-title: Tutorial3 - WGS analysis with DeepVariant container 
+title: Tutorial2 - WGS analysis with DeepVariant container 
 ---
 
 ## Analysis of whole genome sequencing (WGS) data using DeepVariant singularity container
