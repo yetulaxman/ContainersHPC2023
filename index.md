@@ -9,7 +9,7 @@ author: CSC Training
 
 
 ## 2.1 Introduction to docker containers 
-### [Slides: Converting docker images to singularity images](https://a3s.fi/containers-workflows/docker2singularity.html)
+### Slides: Introduction to docker container
 ###  Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'containers' %}
@@ -18,7 +18,7 @@ author: CSC Training
 {% endfor %}
 
 ## 2.2 Using pre-existing docker images in HPC environement
-
+### [Slides: Converting docker images to singularity images](https://a3s.fi/containers-workflows/docker2singularity.html)
 ### Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'conversion' %}
