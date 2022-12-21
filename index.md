@@ -17,7 +17,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## 2.2 Using pre-existing docker containers in HPC environement
+## 2.2 Using pre-existing docker images in HPC environement
 
 ### Tutorials and exercises
 {% for hands-on in items %}
