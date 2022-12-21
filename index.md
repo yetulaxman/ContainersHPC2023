@@ -27,7 +27,7 @@ author: CSC Training
 {% endfor %}
 
 ## 2.3 Containerized bioapplications
-###  Slides:Containerised bio applications](https://a3s.fi/containers-workflows/bioapplications.html)
+###  [Slides:Containerised bio applications](https://a3s.fi/containers-workflows/bioapplications.html)
 ### Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'bioapplications' %}
