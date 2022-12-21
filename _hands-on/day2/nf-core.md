@@ -1,6 +1,6 @@
 ---
 topic: nextflow
-title: Tutorial1 - nf-core pipeline
+title: Tutorial2 - nf-core pipeline
 ---
 
 nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data. 
