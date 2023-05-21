@@ -1,5 +1,5 @@
 ---
-topic: containers
+topic: docker
 title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
