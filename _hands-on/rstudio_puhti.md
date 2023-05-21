@@ -8,23 +8,24 @@ In this tutorial, you will learn how to:
    - Make custom installation of R packages
 
 
+
+Start interactive node as below and choose your project name on prompt:
+
 ```bash
-# start interactive node as below and choose your project name on prompt
 sinteractive -c 2 -m 4G -d 250
 
-# Build a singularity image (Apptainer) from  a docker registry (e.g., DockerHub)
+```
+Build a singularity image (Apptainer) from  a docker registry (e.g., DockerHub) as below:
 
+```bash
 singularity pull --name rstudio_v430.sif docker://rocker/rstudio:4.3.0
 
-# Launch singularity container from the terminal
-# modify the name of the image in the script: start-rstudio-server 
-# usually 'singularity exec -B ... image.sif ...'  is sufficient for most applications. But rstudio being complex, we need to set several seetings most of which #are CSC-specific before launching Rstudio in start-srtudio-server. But for now, just change the 
+# Modify the name of the image (tip: llok for "/Full/path/rstudio.sif") in the script: start-rstudio-server  and launch singularity container from the terminal.
+# Please note usually 'singularity exec -B ... image.sif ...'  is sufficient for most applications. But rstudio being complex application with GUI in shared  #environment like Puhti, we need to set several settings, most of which #are CSC-specific before launching Rstudio in start-srtudio-server. But for now, just #change the 
 
 start-rstudio-server 
 ```
-
-#follow the instructions that appear on screen upon successfull launching of rstudio. If you don't have SSH keys in place follow the isntructions here 
-SSH port tunneling for login node first and then for compute node
+Follow the instructions that appear on screen upon successfull launching of Rstudio. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then for compute node:
 
 ```bash
 ssh -l <username> -L 8787:localhost:8888 puhti-login1.csc.fi    # Issue this command while being on local machine                                                        
