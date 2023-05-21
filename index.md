@@ -38,7 +38,7 @@ author: CSC Training
 ### [Slides: R and Jupyter notebooks as containers](https://a3s.fi/CSC_training/workflows_throughput.html)
 ###  Tutorials and exercises
 {% for hands-on in items %}
-{% if hands-on.topic == 'nextflow' %}
+{% if hands-on.topic == 'containers' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
