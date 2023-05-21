@@ -1,5 +1,5 @@
 ---
-topic: containers
+topic: docker
 title: Tutorial3 -  Sharing images using registries
 ---
 
