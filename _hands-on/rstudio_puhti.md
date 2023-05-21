@@ -2,6 +2,11 @@
 topic: containers
 title: Tutorial1 - Custom R notebooks on Puhti
 ---
+In this tutorial, you will learn how to:
+   - Pull a Rstudio image from DokcerHub
+   - Launch a Rstudio image on Puhti
+   - Make custom installation of R packages
+
 
 ```bash
 # start interactive node as below and choose your project name on prompt
