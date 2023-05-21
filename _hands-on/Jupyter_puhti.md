@@ -3,8 +3,8 @@ topic: containers
 title: Tutorial2 - Custom Jupyter notebooks on Puhti
 ---
 In this tutorial, you will learn how to:
-    - Install your custome environment with Tykky wrapper tool
-    - Launch a Jupyter notebook from Puhti Web Interface
+  - Install your custome environment with Tykky wrapper tool
+  - Launch a Jupyter notebook from Puhti Web Interface
 
 
 # Provisioning a custom Jupyter notebooks for courses/research *via* Puhti web interface 
