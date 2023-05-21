@@ -74,7 +74,7 @@ mv  NMRLipids-course.lua  NMRLipids-course-yourcscusername.lua
 
 ### Access custom notebook via Puhti web interface
 
-1. Log in to [Puhti web interface](https://www.puhti.csc.fi/public/login.html)
+1. Log in to [Puhti web interface](https://www.puhti.csc.fi)
 2. Login with CSC/HAKA/VIRTU credentials (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) 
    page under a course (or own) project before using this service). 
 3. Once login is successful, select "Interactive Sessions" on the top menu bar and then click "Jupyter for courses". 
