@@ -1,6 +1,6 @@
 ---
-topic: rstudio
-title: Tutorial - Custom R notebooks on Puhti
+topic: containers
+title: Tutorial1 - Custom R notebooks on Puhti
 ---
 
 ```bash
