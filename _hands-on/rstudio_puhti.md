@@ -1,6 +1,6 @@
 ---
 topic: containers
-title: Tutorial1 - Custom R notebooks on Puhti
+title: Tutorial1 - Custom Rstudio on Puhti
 ---
 In this tutorial, you will learn how to:
    - Pull a Rstudio image from DokcerHub
