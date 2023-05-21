@@ -1,6 +1,6 @@
 ---
 topic: containers
-title: Tutorial2 - Custom R Jupyter notebooks on Puhti
+title: Tutorial2 - Custom Jupyter notebooks on Puhti
 ---
 
 # Provisioning a custom Jupyter notebooks for courses/research *via* Puhti web interface 
