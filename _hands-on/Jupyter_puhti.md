@@ -5,45 +5,42 @@ title: Tutorial2 - Custom R Jupyter notebooks on Puhti
 
 # Provisioning a custom Jupyter notebooks for courses/research *via* Puhti web interface 
 
-A custom Jupyter notebook to meet the needs of computing environment can
+A custom Jupyter notebook to meet the needs of your computing environment can
 be provisioned at CSC through [Puhti web interface](https://www.puhti.csc.fi). Here are a few minimal instructions
-for setting up the notebooks on Puhti supercomputer:
+for setting up your Jupyter notebook on Puhti supercomputer:
 
 ### Install necessary computing environment to *projappl* directory using *tykky* wrapper tool
 
-[Tykky](https://docs.csc.fi/computing/containers/tykky/) wraps installations of software tools/packages inside of a container
+[Tykky](https://docs.csc.fi/computing/containers/tykky/) container wrapper installs your software tools/packages  as a container
 image for improved performance metrics such as faster startup times, reduced I/O load, and fewer number of file creations on 
-Lustre parallel filesystems. 
-
-For the installation of computational environment required for your needs, use tykky container wrapper tool to install
-all needed computing environment in the *projappl* directory. For the purpose of this tutorial, we use [NMRLipids course](https://www.helsinki.fi/en/researchgroups/biophysical-chemistry/nmrlipids-summer-school-2022) set up which needs installation
-of several [python packages](https://raw.githubusercontent.com/CSCfi/Puhti_gui_tutorial/master/env_nmr.yml) for Jupyter notebook 
+Lustre parallel filesystems. Please install all needed computing environment in the *projappl* directory. For the purpose of 
+this tutorial, we use [NMRLipids course](https://www.helsinki.fi/en/researchgroups/biophysical-chemistry/nmrlipids-summer-school-2022) 
+set up which needs installation of several [python packages](https://raw.githubusercontent.com/CSCfi/Puhti_gui_tutorial/master/env_nmr.yml) 
+for Jupyter notebook 
 
 Install python packages for course using tykky as below:
 ```bash
 # Navigate to the scratch area of your course project 
 cd /scratch/project_xxxx/      # Make sure to replace the correct project number here
 
-# As a starting point, you can download all necessary scripts/files for the 
-# customising course environment. The file NMRLipids-course.lua (i.e., coursename.lua) is a module 
-# environment file. Replace the "NMRLipids-course" with your course name in the file name of .lua file. 
-# This name will be the environment name that you would like to see on Puhti web interface when notebook is
-# launched. Inside  of the .lua file, you can set the absolute path for bin directory (where you would 
-# have installed all the python packages using tykky),configure path for notebook URL (The notebook that
-# you would like to see when you launch Jupyter notebook) and  optional source path for extra material 
-# (source path is where you download extra matrial on scratch area and refer to the path so that the material will
-# be copied to Jupyter notebook directory upon launching notebook).
+# As a starting point, you can download all necessary template files for the 
+# customising course environment from allas storage (as shown below). The file NMRLipids-course.lua (i.e., coursename.lua) is a module 
+# environment file. Replace the "NMRLipids-course" with your any custom name in the file name of .lua file. 
+# This name will be the environment name that you would like to see on Puhti web interface. Inside  of the .lua file, 
+# you can set the absolute path for bin directory (where you would  have installed all the python packages using tykky),
+# configure path for notebook URL (The notebook that you would like to see when you launch Jupyter notebook) and  optional
+# source path for extra material (source path is where you download extra matrial on scratch area and refer to the path 
+# so that the material will  be copied to Jupyter notebook directory upon launching notebook).
 
 wget https://a3s.fi/CSC_training/Puhti_web_helper.tar.gz && tar -xavf Puhti_web_helper
 cd Puhti_web_helper
 module load tykky
-mkdir /projappl/project_xxxx/$USER/NMRLipids  
+mkdir -p /projappl/project_xxxx/$USER and mkdir -p /projappl/project_xxxx/$USER/NMRLipids  
 # You can write all needed python packages in yaml as in env_nmr.yml for NMRLpids course and install with tykky
-conda-containerize new --prefix /projappl/project_xxxx/$USER/NMRLipids  env_nmr.yml  #  Installation can take a while
+conda-containerize new --prefix /projappl/project_xxxx/$USER/NMRLipids  env_nmr.yml  #  Installation can take for a while
 ```
 Tykky would install all needed packages (as listed in the file, *env_nmr.yml*) to the directory `/projappl/project_xxxx/$USER/NMRLipids`. 
 Please note that you have to provide absolute path of **bin** directory  (which exists inside the folder of `/projappl/project_xxxx/$USER/NMRLipids`) in the .lua file
-
 
 ### Create custom environment in Puhti
 
@@ -63,11 +60,12 @@ In this NMRLipids course example, the above-mentioned two template files (`NMRLi
 mkdir -p /projappl/project_xxxx/www_puhti_modules && cp NMRLipids-course-resources.yml NMRLipids-course.lua /projappl/project_xxxx/www_puhti_modules
 
 ```
-As the name of the .lua file will appear as custom notebook environment on Puhti web inaterface, please use some unique names  for .lua and .yaml files
-(e.g., add CSC user name in the file name).
+As the name of the .lua file will appear as custom notebook environment on Puhti web inaterface, please use some unique name  for .lua and .yaml file 
+(e.g., add CSC user name in the file name) in this course.
 
 ```
 cd /projappl/project_xxxx/www_puhti_modules
+# add your real CSC username in .lua and .yaml file names
 mv  NMRLipids-course-resources.yml  NMRLipids-course-yourcscusername-resources.yml
 mv  NMRLipids-course.lua  NMRLipids-course-yourcscusername.lua 
 ```
