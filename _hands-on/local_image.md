@@ -3,14 +3,14 @@ topic: docker
 title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
-We have earlier converted Docker images from registries to corresponding singularity images in the previous tutorials. Sometimes, the images may not be readily available in image registries for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. This tutorial explains how to build a singularity image from a local docker image in play-with-docker environment. 
+Existing images may not be readily available in image registries for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. This tutorial explains how to build a singularity image from a local docker image in play-with-docker environment. 
 
 ###  Expected outcome of this tutorial:
 After this tutorial, you will learn to:
 - Save a docker image locally 
 - Launch a singularity container from a local docker image 
 
-### Converting a local docker image to singularity 
+### Converting a local docker image to Apptainer
 
 1. Let's use the same trimmomatic software example we have used in the previous tutorial. <a href="http://labs.play-with-docker.com/" target="_blank"> In PWD terminal</a>, run the following command to pull an image:
 
