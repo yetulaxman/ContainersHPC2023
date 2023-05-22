@@ -41,8 +41,8 @@ author: CSC Training
 {% endfor %}
 
 ## 4. Containerised Applications
-### [Slides: R and Jupyter notebooks as containers](https://a3s.fi/CSC_training/Notebooks.html)
-### [Slides:  High-throughput computing and workflows](https://a3s.fi/CSC_training/workflows_throughput.html)
+### Slides: [R and Jupyter notebooks as containers](https://a3s.fi/CSC_training/Notebooks.html)
+### Slides: [High-throughput computing and workflows](https://a3s.fi/CSC_training/workflows_throughput.html)
 ###  Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'containers' %}
