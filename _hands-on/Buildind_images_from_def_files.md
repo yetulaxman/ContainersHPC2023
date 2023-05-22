@@ -1,6 +1,6 @@
 ---
 topic: apptainer
-title: Tutorial3 - Creating Apptainer containers from definition files
+title: Tutorial2 - Creating Apptainer containers from definition files
 ---
 
 # Creating Apptainer containers from definition files

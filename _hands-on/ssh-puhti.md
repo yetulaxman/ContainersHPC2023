@@ -1,5 +1,5 @@
 ---
-topic: connecting
+topic: introduction
 title: Tutorial1 - Login to Puhti with a browser or SSH
 ---
 
