@@ -37,7 +37,7 @@ chmod +x start-rstudio-server
 Follow the instructions that appear on screen upon successfull launching of Rstudio. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then for compute node:
 
 ```bash
-ssh -l <username> -L 8787:localhost:8888 puhti-login1.csc.fi    # Issue this command while being on local machine                                                        
+ssh -l <username> -L 8787:localhost:8888 puhti.csc.fi    # Issue this command while being on local machine                                                        
 ssh -l <username>  -L 8888:localhost:container_port <username>@$HOSTNAME      # Issue this command on login node; $HOSTNAME is compute node attached to 
                                                                               # interactive session change "container_port" number where rstudio is exposed on 
                                                                               # compute node); 
