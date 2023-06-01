@@ -31,7 +31,8 @@ apptainer pull --name rstudio_v430.sif docker://rocker/rstudio:4.3.0
 # rstudio
 wget https://a3s.fi/biocontainers2023/start-rstudio-server
 # update image name (i.e., rstudio_v430.sif) in the following script and run
-start-rstudio-server 
+chmod +x start-rstudio-server 
+./start-rstudio-server 
 ```
 Follow the instructions that appear on screen upon successfull launching of Rstudio. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then for compute node:
 
