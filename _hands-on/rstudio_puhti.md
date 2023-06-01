@@ -53,16 +53,17 @@ You can now stop the running rstudio on the interactive node (control + c) and f
 1.  Create a folder for your R packages in `/projappl` (open a login node shell in the [Puhti web interface](https://www.puhti.csc.fi/) or log in to Puhti with SSH):
 
 ``` bash
-# replace your actual project number and include specific version of R (in this case, <rversion> is: R430) 
-# with which you are going to install R packages
+# replace your actual project number and include specific version of R (in this case, <rversion> is: R430) in the directory
+# where you are going to install your custom R packages
 
 mkdir -p /projappl/<project>/$USER
 mkdir /projappl/<project>/$USER/project_rpackages_R430   
 ```
 
-2. Launch the R console in an interactive shell session from your singularity container 
+2. Launch the R console from your singularity container in an interactive shell session 
 
 ``` r
+# Navigate to the folder where you have singularity image 
 singularity exec -B /projappl/  rstudio_v430.sif bash
 R
 .libPaths(c("/projappl/<project>/$USER/project_rpackages_<rversion>", .libPaths())) 
