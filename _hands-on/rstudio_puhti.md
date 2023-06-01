@@ -53,48 +53,37 @@ You can now stop the running rstudio on the interactive node (control + c) and f
 1.  Create a folder for your R packages in `/projappl` (open a login node shell in the [Puhti web interface](https://www.puhti.csc.fi/) or log in to Puhti with SSH):
 
 ``` bash
-# First navigate to /projappl/<project>, then
-mkdir project_rpackages_<rversion>
+# replace your actual project number and include specific version of R (in this case, <rversion> is: R430) 
+# with which you are going to install R packages
+
+mkdir -p /projappl/<project>/$USER
+mkdir /projappl/<project>/$USER/project_rpackages_R430   
 ```
 
-2.  Start an R session (launch RStudio in the [Puhti web interface](https://www.puhti.csc.fi/) or launch the R console in an interactive shell session: start the job with `sinteractive` -\> `module load r-env` -\> `start-r`). In R, add the folder you created above to the list of directories where R will look for packages:
-
-``` r
-.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths())) 
-```
-
-Assign `libpath` to point to this directory (not strictly necessary but can make life easier):
-
-``` r
-libpath <- .libPaths()[1]
-```
-
-3.  Install the package (again, defining `lib = libpath` to specify the installation location is not strictly necessary but recommended)
-
-``` r
-install.packages("packagename", lib = libpath)
-```
-
-For example, you can try installing a package called `ROCR` with
+2. Launch the R console in an interactive shell session from your singularity container 
 
 ``` r
 singularity exec -B /projappl/  rstudio_v430.sif bash
 R
-install.packages("ROCR", lib = libpath)
+.libPaths(c("/projappl/<project>/$USER/project_rpackages_<rversion>", .libPaths())) 
+# Assign `libpath` to point to this directory 
+ libpath <- .libPaths()[1]
+# For example, you can try installing a package called `ROCR` now
+ install.packages("ROCR", lib = libpath)
 ```
 
 Finished! The R package is now ready to be loaded and used. Try loading `beepr` with `library(ROCR)`.
 
 ```r
 # exit the container now and relaunch rstudio as below
-start-rstudio-server # Follow the instructions as before to ass rstudio
+start-rstudio-server # Follow the instructions as before to access rstudio from your web browser
 
 ```
 
 💡 The package location is defined only for the current R session! R has to be reminded of the location at the start of every R session or script where you want to use the project-specific package by running this command again:
 
 ``` r
-.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths())) 
+.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))   # replace <rversion> with exact version tag you have used
 library(ROCR)
 ```
 
