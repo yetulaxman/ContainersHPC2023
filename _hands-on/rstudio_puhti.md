@@ -18,13 +18,19 @@ sinteractive -c 2 -m 4G -d 250
 Build a singularity image (Apptainer) from  a docker registry (e.g., DockerHub) as below:
 
 ```bash
+# Navigate to the scratch area of your project before pulling an image from dockerhub
+cd /scratch/project_xxxx/$USER 
 apptainer pull --name rstudio_v430.sif docker://rocker/rstudio:4.3.0
 
 
-# Please note usually 'singularity exec -B ... image.sif ...'  is sufficient for most applications. But rstudio being complex application with GUI in shared  #environment like Puhti, we need to set several settings, most of which are CSC-specific before launching Rstudio in start-srtudio-server. But for now, just #change the name of image (tip: look for "/Full/path/rstudio.sif") in the script: start-rstudio-server  and launch singularity container from the terminal.
-# download start script for rstdio
+# Please note usually 'singularity exec -B ... image.sif ...'  is sufficient for most applications. 
+# But rstudio being complex application with GUI in # shared  environment like Puhti, we need to set 
+# several settings, most of which are CSC-specific before launching Rstudio in start-srtudio-server.
+# But for now, just #change the name of image (tip: look for "/Full/path/rstudio.sif") in the script:
+# start-rstudio-server  and launch singularity container from the terminal. Download start script for
+# rstudio
 wget https://a3s.fi/biocontainers2023/start-rstudio-server
-# update image name and run
+# update image name (i.e., rstudio_v430.sif) in the following script and run
 start-rstudio-server 
 ```
 Follow the instructions that appear on screen upon successfull launching of Rstudio. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then for compute node:
