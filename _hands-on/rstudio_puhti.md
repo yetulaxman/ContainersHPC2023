@@ -5,11 +5,11 @@ title: Tutorial1 - Custom Rstudio on Puhti
 In this tutorial, you will learn how to:
    - Pull a Rstudio image from DokcerHub
    - Launch a Rstudio image on Puhti
-   - Make custom installation of R packages
+   - Make custom installations of R packages
 
 
 
-Start interactive node as below and choose your project name on command prompt:
+Start an interactive node as below and choose your project name upon the command prompt:
 
 ```bash
 sinteractive -c 2 -m 4G -d 250
@@ -23,19 +23,19 @@ cd /scratch/project_xxxx/$USER
 apptainer pull --name rstudio_v430.sif docker://rocker/rstudio:4.3.0
 
 
-# Please note usually 'singularity exec -B ... image.sif ...'  is sufficient for most applications. 
-# But rstudio being complex GUI application in shared  environment like Puhti, we need to set 
+# Please note that usually 'singularity exec -B ... image.sif ...' command is sufficient for most applications. 
+# But rstudio being a complex GUI application in shared  environment like Puhti, we need to set 
 # several settings, most of which are CSC-specific before launching Rstudio in start-srtudio-server.
-# But for now, just change the name of image (tip: look for "rstudio.sif" and you should see it in places) in the script:
-# start-rstudio-server  and launch singularity container from the terminal. 
+# But for now, just change the name of image (tip: look for "rstudio.sif" and you should see it in two places) in the script,
+# start-rstudio-server  and launch apptainer container from the terminal. 
 
 # Download start script for rstudio
 wget https://a3s.fi/biocontainers2023/start-rstudio-server
-# update image name (i.e., use 'rstudio_v430.sif' nsread of 'rstudio.sif') in the start script and launch rstudio
+# update image name (i.e., use 'rstudio_v430.sif' in the place of 'rstudio.sif') in the start script and launch rstudio
 chmod +x start-rstudio-server 
 ./start-rstudio-server 
 ```
-Follow the instructions that appear on screen upon successfull launching of Rstudio if you have already set-up SSH keys on Puhti. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then for compute node:
+Follow the instructions that appear on screen upon successfull launching of Rstudio if you have already set-up SSH keys on Puhti. If you don't have SSH keys already in place, follow the instructions below for  SSH port tunneling for login node first and then compute node:
 
 ```bash
 ssh -L 8787:localhost:8888 <username>@puhti.csc.fi    # Issue this command while being on local machine                                                        
@@ -43,7 +43,7 @@ ssh -L 8888:localhost:container_port <username>@$HOSTNAME      # Issue this comm
                                                                # interactive session change "container_port" number where rstudio is exposed on 
                                                                # compute node); 
  ```
-Point your browser to http://localhost:8787. If successful, rstudio should appear now on the browser. Copy and paste rstudio username and passpassword from the terminal where you have launched rstudio on Puhti to login to rstudio on your local browser.
+Point your browser to http://localhost:8787. If successful, rstudio should appear now on the browser. You need credentials to login to rstudio. Copy and paste rstudio username and passpassword from the terminal where you have launched rstudio on Puhti.
 
 #### How to install an R package on Puhti
 
@@ -62,7 +62,7 @@ mkdir /projappl/<project>/$USER/project_rpackages_R430
 Launch R console from your apptainer container in an interactive shell session: 
 
 ``` r
-# Navigate to the folder where you have apptainer image and launch R inside of the Rstudio container
+# Navigate to the folder where you have apptainer image and launch R session inside of Rstudio container
 singularity exec -B /projappl/  rstudio_v430.sif bash
 R
 # add installation path to .libpaths 
@@ -71,9 +71,9 @@ R
  libpath <- .libPaths()[1]
 # For example, you can try installing a package called `ROCR` now
  install.packages("ROCR", lib = libpath)
-# Exit out of R terminal and then container
+# Exit out of R terminal and then the container
 
-control +d  # exit R terminal
+control +d  # exit out of R terminal
 control +d  # exit out of container
 ```
 
