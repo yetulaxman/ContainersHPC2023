@@ -72,7 +72,7 @@ R
  install.packages("ROCR", lib = libpath)
 ```
 
-Finished! The R package is now ready to be loaded and used. Try loading `beepr` with `library(ROCR)`.
+Finished! The R package is now ready to be loaded and used. Try loading with `library(ROCR)`.
 
 ```r
 # exit the container now and relaunch rstudio as below
