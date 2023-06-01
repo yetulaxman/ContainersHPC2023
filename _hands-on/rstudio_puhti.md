@@ -92,8 +92,6 @@ start-rstudio-server # Follow the instructions as before to access rstudio from 
 library(ROCR)
 ```
 
-💡 Instead of installing a missing package for your own project, you can ask for a module-wide installation for all users by contacting [servicedesk\@csc.fi](servicedesk@csc.fi)
-
 #### More information
 
 💡 Read more about using R on Puhti in [r-env documentation](https://docs.csc.fi/apps/r-env/) in Docs CSC.
