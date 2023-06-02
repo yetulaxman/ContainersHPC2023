@@ -1,9 +1,19 @@
+
+## Tutorial 3: Nextflow pipeline with singularity containers
+
 ---
 topic: nextflow_container
 title: Tutorial1 - nf-core pipeline
 ---
 
-nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data. 
+In this tutorial, you will learn nextflow pipeline that uses 
+ - singularity container
+ - user-defined profiles
+ - batch job script to deploy a pipeline on Puhti
+
+Containerised applications are highly portable and reproducible for scientific applications. Fortunately, Nextflow smoothly supports integration with popular containers ( e.g., [Docker](https://www.nextflow.io/docs/latest/docker.html) and [Singularity](https://www.nextflow.io/docs/latest/singularity.html)) to provide a light-weight virtualisation layer for running software applications. Please note that you can only work with *Singularity* containers on Puhti as *docker* containers require prevelized access which CSC users **don't** have it on Puhti.
+
+Here we use [Sarek workflow](https://github.com/nf-core/sarek) from nf-core community. 
 
 
 In this tutorial, we will use Puhti supercomputer. First login to Puhti using SSH (or by opening a login node shell in the [Puhti web interface](https://www.puhti.csc.fi)):
