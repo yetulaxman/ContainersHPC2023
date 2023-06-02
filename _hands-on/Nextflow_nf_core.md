@@ -2,8 +2,8 @@
 ## Tutorial 3: Nextflow pipeline with singularity containers
 
 ---
-topic: nextflow_container
-title: Tutorial1 - nf-core pipeline
+topic: containers
+title: Tutorial3 - Nextflow pipeline example with containers 
 ---
 
 In this tutorial, you will learn nextflow pipeline that uses 
