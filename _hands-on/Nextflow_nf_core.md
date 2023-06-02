@@ -1,6 +1,3 @@
-
-## Tutorial 3: Nextflow pipeline with singularity containers
-
 ---
 topic: containers
 title: Tutorial3 - Nextflow pipeline example with containers 
