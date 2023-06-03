@@ -3,7 +3,7 @@ topic: docker
 title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
-Existing images may not be readily available in image registries for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. This tutorial explains how to build a singularity image from a local docker image in play-with-docker environment. 
+Existing images may not be readily available in image registries for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. This tutorial explains how to build a singularity image on HPC systems from a local docker image prepared in play-with-docker environment. 
 
 ###  Expected outcome of this tutorial:
 After this tutorial, you will learn to:
@@ -25,7 +25,7 @@ After this tutorial, you will learn to:
    ```bash  
    docker images
    ```
-   From the above command, you need to find an image ID of trimmomatic image to save it locally. 
+   From the above command, you need to find an image ID (this is unique to you) of trimmomatic image to save it locally. 
   
 3. Create a tarball of the Docker image (with image id as cc8b303fee58)  using the **docker save** command as below:
   
