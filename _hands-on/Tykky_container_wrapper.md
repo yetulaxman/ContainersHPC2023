@@ -5,7 +5,7 @@ title: Tutorial2 - Tykky container wrapper
 
 # Tykky container wrapper
 
-CSC provides the [Tykky conatiner wrapper tool]https://docs.csc.fi/computing/containers/tykky/) to build container-based installations on CSC supercomputers with normal user rights. It works around the privilege restrictions by starting with a ready-made container and then does all the installations in a SquashFS filesystem image that gets bound at runtime. 
+CSC provides the [Tykky conatiner wrapper tool](https://docs.csc.fi/computing/containers/tykky/) to build container-based installations on CSC supercomputers with normal user rights. It works around the privilege restrictions by starting with a ready-made container and then does all the installations in a SquashFS filesystem image that gets bound at runtime. 
 
 Tykky also creates wrapper scripts for all the executables in specifed folders so in most cases usage is identical to natively installed applications.
 
