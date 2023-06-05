@@ -3,14 +3,14 @@ topic: containers
 title: Tutorial2 - Custom Jupyter notebooks on Puhti
 ---
 In this tutorial, you will learn how to:
-  - Install your custome environment with Tykky wrapper tool
+  - Install your custom environment with Tykky wrapper tool
   - Launch a Jupyter notebook from Puhti Web Interface
 
 
-# Provisioning a custom Jupyter notebooks for courses/research *via* Puhti web interface 
+# Provisioning custom Jupyter notebooks for courses/research *via* Puhti web interface 
 
 A custom Jupyter notebook to meet the needs of your computing environment can
-be provisioned at CSC through [Puhti web interface](https://www.puhti.csc.fi). Here are a few minimal instructions
+be provisioned at CSC through [Puhti web interface](https://www.puhti.csc.fi). Here are few minimal instructions
 for setting up your Jupyter notebook on Puhti supercomputer:
 
 ### Install necessary computing environment to *projappl* directory using *tykky* wrapper tool
@@ -28,11 +28,11 @@ Install python packages for course using tykky as below:
 cd /scratch/project_xxxx/      # Make sure to replace the correct project number here
 
 # As a starting point, you can download all necessary template files for the 
-# customising course environment from allas storage (as shown below). The file NMRLipids-course.lua (i.e., coursename.lua) is a module 
-# environment file. Replace the "NMRLipids-course" with your any custom name in the file name of .lua file. 
+# customising course environment from allas storage (as shown below). The file, NMRLipids-course.lua (i.e., coursename.lua) is a module 
+# environment file. Replace the "NMRLipids-course" with your custom name in the file name of .lua file. 
 # This name will be the environment name that you would like to see on Puhti web interface. Inside  of the .lua file, 
 # you can set the absolute path for bin directory (where you would  have installed all the python packages using tykky),
-# configure path for notebook URL (The notebook that you would like to see when you launch Jupyter notebook) and  optional
+# configure path for notebook URL (The notebook that you would like to see launching Jupyter notebook) and  optional
 # source path for extra material (source path is where you download extra matrial on scratch area and refer to the path 
 # so that the material will  be copied to Jupyter notebook directory upon launching notebook).
 

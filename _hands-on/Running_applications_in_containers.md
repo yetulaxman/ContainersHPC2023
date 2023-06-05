@@ -257,4 +257,4 @@ apptainer exec tutorial.sif hello2
 
 ☝🏻 When searching online for instructions, pay attention that the instructions are for the same version of Apptainer as you are using. There has been some command syntax changes etc. between versions so older instructions may not work as copy/paste. Also note that Apptainer is formerly known as Singularity.
 
-💡 For more detailed instructions, see the [Apptainer documentation](https://
+💡 For more detailed instructions, see the [Apptainer documentation](https://apptainer.org/docs/user/latest/)
