@@ -7,6 +7,7 @@ author: CSC Training
 
 ## 1. Introduction to Containers
 ### Slides: [Introduction to CSC HPC environments](https://a3s.fi/biocontainers2023/CSC_HPC_Systems.html)
+### Slides: [Container wrapper](https://a3s.fi/biocontainers2023/Container_wrapper.html)
 ### Slides: [Introduction to Containers](https://a3s.fi/biocontainers2023/Introduction_to_containers.html)
 
 ###  Tutorials and exercises
