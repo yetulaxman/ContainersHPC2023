@@ -63,7 +63,7 @@ mkdir -p /projappl/project_xxxx/www_puhti_modules && cp NMRLipids-course-resourc
 
 ```
 As the name of the ".lua" file will appear as custom notebook environment on Puhti web inaterface, please use some unique name  for .lua and .yaml file 
-(e.g., add your CSC user name in the file name) in this course environment.
+(e.g., add your CSC user name in the file name e.g., NMRLipids-course-yourcscusername.lua) in this course environment.
 
 ```
 cd /projappl/project_xxxx/www_puhti_modules
