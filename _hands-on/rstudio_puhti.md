@@ -15,7 +15,7 @@ Start an interactive node as below and choose your project name upon the command
 sinteractive -c 2 -m 4G -d 250
 
 ```
-Build an apptainer image (singularity) from  a docker registry (e.g., in this case, [DockerHub](https://hub.docker.com/)) as below:
+Build an apptainer image (singularity) for Rstudio as retrieved from  a docker registry (e.g., in this case, [DockerHub](https://hub.docker.com/)) as below:
 
 ```bash
 # Navigate to the scratch area of your project before pulling an image from dockerhub
