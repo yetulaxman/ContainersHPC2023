@@ -12,7 +12,8 @@ many not be the most intuitive one, it has many benefits: Definition files are e
 upgradeabla and reusable. They are the prefereable way to to distribute containers (as opposed
 to "black box" image files) and are necessary when uploadin your images to most repositories.
 
-On some systems Apptainer provides ways to build container images locally without root privileges with the [fakeroot function](https://apptainer.org/docs/user/latest/fakeroot.html). In CSC supercomputers this has not been enabled due to security concerns.
+On some systems Apptainer provides ways to build container images locally without root privileges with the [fakeroot function](https://apptainer.org/docs/user/latest/fakeroot.html). In CSC supercomputers this has not been enabled due to security concerns. It is available in our course
+build environment.
 
 Even if fakeroot is available, in most cases it is preferable to build containers in a system where you have root access. This could be your own machine or a suitable virtual machine. This kind of setup gives you the most options, and makes troubleshooting the easiest.
 
@@ -27,9 +28,11 @@ Login information to be added later
 ## 2. Creating a definition file
 
 Create an empty definition file. You can use a text editor of your choice, e.g. `nano`:
+
 ```bash
 nano macs3.def
 ```
+
 💬 In nano you can use `ctrl + o` to save and `ctrl + x` to exit.
 
 A definition file will have a header defining the base image, and number of sections defining
@@ -92,6 +95,7 @@ Add the following lines to the definition file:
   apt install python3 -y
   apt install pip -y  
 ```
+
 💬Indentation is optional, but improves readability. 
 💬Comments will make the definition file easier to read for others (and also for yourself after some time has passed).
 
@@ -107,11 +111,13 @@ Add the following lines to the definition file:
   # Install MACS3
   pip install MACS3
 ```
+
 You can now try to build it:
 
 ```bash
-apptainer build macs3.sif macs3.def
+apptainer build --fakeroot macs3.sif macs3.def
 ```
+
 If the build finishes, try it:
 
 ```bash
@@ -138,7 +144,7 @@ Comment out or delete the pip command, and add the following to the definition f
 You can now try to build it:
 
 ```bash
-apptainer build macs3.sif macs3.def
+apptainer build --fakeroot macs3.sif macs3.def
 ```
 
 If the build finishes, try it:
@@ -185,7 +191,7 @@ or using variable `$APPTAINER_ENVIRONMENT` in %post, instead of relying on any f
 You can try this definition file as above:
 
 ```bash
-apptaine build macs3.sif macs3.def
+apptaine build --fakeroot macs3.sif macs3.def
 ```
 
 If the build finishes, try it:
@@ -262,7 +268,7 @@ apptainer run-help macs3.sif
 Try adding some additional metadata to the definition file and rebuild.
 
 ```bash
-apptainer build macs3.sif macs3.def
+apptainer build --fakeroot macs3.sif macs3.def
 ```
 
 You can check the information you added:
@@ -274,3 +280,15 @@ apptainer run-help macs3.sif
 ```
 
 We have provided some [example definition files](https://github.com/amsaren/course_materials/tree/main/Singularity_def_file_examples), including the various versions of this tutorial. 
+
+You can try copying the the image file to Puhti and running it there
+
+```bash
+scp macs3.sif <username>@puhti.csc.fi:macs3.sif
+```
+
+In Puhti:
+
+```bash
+apptainer exec macs3.sif macs3 --help
+```

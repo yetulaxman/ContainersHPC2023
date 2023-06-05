@@ -67,5 +67,8 @@ export PATH="/projappl/<project>/$USER/tykky-env/bin:$PATH"    # replace <projec
 
 💬 To modify an existing Tykky-based Conda environment you can use the `update` keyword of `conda-containerize` together with the `--post-install` option to specify a bash script with commands to run to update the installation. [See more details in Docs CSC](https://docs.csc.fi/computing/containers/tykky/).
 
+## Creating wrappers to an existing container
 
+
+## Extra task: Exploring a Tykky installation
 
