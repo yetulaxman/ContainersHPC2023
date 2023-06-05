@@ -25,9 +25,9 @@ apptainer pull --name rstudio_v430.sif docker://rocker/rstudio:4.3.0
 
 # Please note that usually 'singularity exec -B ... image.sif ...' command is sufficient for most applications. 
 # But rstudio being a complex GUI application in shared  environment like Puhti, we need to set 
-# several settings, most of which are CSC-specific before launching Rstudio in start-srtudio-server.
-# But for now, just change the name of image (tip: look for "rstudio.sif" and you should see it in two places) in the script,
-# start-rstudio-server  and launch apptainer container from the terminal. 
+# several settings, most of which are CSC-specific before launching Rstudio.
+# But for now, just change the name of image (tip: look for "rstudio.sif" and you should see it in two places) in the ready-made script,
+# "start-rstudio-server"  and launch apptainer container from the terminal. 
 
 # Download start script for rstudio
 wget https://a3s.fi/biocontainers2023/start-rstudio-server
@@ -47,7 +47,7 @@ Point your browser to http://localhost:8787. If successful, rstudio should appea
 
 #### How to install an R package on Puhti
 
-You can now stop running rstudio on interactive node (control + c) and follow the instructions for installing an R package. Please note that your own package installations have to be R-version specific and should be installed on `/projappl` directory of your project.
+You can now stop running rstudio on interactive node (control + c) and follow the instructions for installing an R package. Please note that your own package installations have to be specific to R-version and should be installed on `/projappl` directory of your project.
 
 Create a folder for installing R packages in `/projappl` (open a login node shell in the [Puhti web interface](https://www.puhti.csc.fi/) or log in to Puhti with SSH):
 
