@@ -22,7 +22,39 @@ We will be building a container for [MACS3](https://github.com/macs3-project/MAC
 
 ## 1. Build system
 
-Login information to be added later
+We have provided a build environment in cPouta for the course.
+
+Start by downloading ssh key:
+
+```bash
+wget https://a3s.fi/saren-2001659-pub/key.zip
+```
+
+Uncompress the file. When prompted, enter password `Course23`
+
+```bash
+unzip key.zip
+```
+
+You can now use the key to login to the build system. Instead of "courseXX" use actual username. Check your username from the table in HedgeDoc.
+
+```bash
+ssh courseXX@86.50.230.250 -i container-course
+```
+
+Start by moving to work disk area and create a directory for yourself:
+
+```bash
+cd /media/volume
+mkdir <username>
+```
+
+To avoid filling up the home directories, set `$APPTAINER_TMPDIR` and `$APPTAINER_CACHEDIR`  to your working directory:
+
+```bash
+export APPTAINER_TMPDIR=$LOCAL_SCRATCH
+export APPTAINER_CACHEDIR=
+```
 
 
 ## 2. Creating a definition file

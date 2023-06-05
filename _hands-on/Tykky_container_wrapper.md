@@ -22,7 +22,7 @@ Many software packages provided by CSC have been installed using Tykky, e.g. R, 
 Create a folder under your project's `/projappl` directory for the installation, e.g.:
 
 ```bash
-mkdir -p /projappl/<project>/$USER/tykky-env    # replace <project> with your CSC project, e.g. project_2001234
+mkdir -p /projappl/<project>/$USER/nglview    # replace <project> with your CSC project, e.g. project_2001234
 ```
 
 Create an `env.yml` environment file defining the packages to be installed. Using for example `nano`, copy/paste the following contents to the file:
@@ -47,7 +47,7 @@ module load tykky
 Create and containerize the Conda environment using the `conda-containerize` command:
 
 ```bash
-conda-containerize new --prefix /projappl/<project>/$USER/tykky-env env.yml    # replace <project> with your CSC project, e.g. project_2001234
+conda-containerize new --prefix /projappl/<project>/$USER/nglview env.yml    # replace <project> with your CSC project, e.g. project_2001234
 ```
 
 ☝🏻 This process can take several minutes so be patient.
@@ -56,7 +56,7 @@ conda-containerize new --prefix /projappl/<project>/$USER/tykky-env env.yml    #
 As instructed by Tykky, add the path to the installation `bin` directory to your `$PATH`:
 
 ```bash
-export PATH="/projappl/<project>/$USER/tykky-env/bin:$PATH"    # replace <project> with your CSC project, e.g. project_2001234
+export PATH="/projappl/<project>/$USER/nglview/bin:$PATH"    # replace <project> with your CSC project, e.g. project_2001234
 ```
 
 💡 Adding this to your `$PATH` allows you to call Python and all other executables installed by Conda in the same way as you had activated a non-containerized Conda environment.
@@ -67,8 +67,35 @@ export PATH="/projappl/<project>/$USER/tykky-env/bin:$PATH"    # replace <projec
 
 💬 To modify an existing Tykky-based Conda environment you can use the `update` keyword of `conda-containerize` together with the `--post-install` option to specify a bash script with commands to run to update the installation. [See more details in Docs CSC](https://docs.csc.fi/computing/containers/tykky/).
 
+
 ## Creating wrappers to an existing container
+
+Tykky can also be used to create the wrapper script for an existing container.
+
+For example instead of installing `nglview` with `conda-containerize`, we could pull it from Docke Hub. (In case of nglview the version in Docker Hub is very old, so you probably would not want to use it in real life.)
+
+```bash
+mkdir nglview_dh
+wrap-container -w /usr/local/bin docker://hainm/nglview:latest --prefix nglview_dh
+```
+
+For ready made containers you often don't know the path to the executables in advance. We speak more about how to explore containers, and find the correct path, in the next exercise.
 
 
 ## Extra task: Exploring a Tykky installation
 
+Sometimes there is a need to explore a Tykky based installations. You may need to e.g. check some cofiguration file or similar.
+
+First move to the installation folder (or alternatively provide paths for the files in the next step).
+
+```bash
+cd /projappl/<project>/$USER/nglview
+```
+
+Since all the user-installed applications and files are in the SquashFS file system image, we need to mount it.
+
+```bash
+apptainer shell --bind img.sqfs:/CSC_CONTAINER:image-src=/ container.sif
+```
+
+If you need to do any changes to the installation it's best dome with `conda-containerize update`.
