@@ -29,8 +29,7 @@ cd /scratch/project_xxxx/      # Make sure to replace the correct project number
 
 # As a starting point, you can download all necessary template files for the 
 # customising course environment from allas object storage storage (as shown below). The downloaded template files include NMRLipids-course.lua 
-# (i.e., coursename.lua) is a module environment file. Replace the "NMRLipids-course" with your own custom name in the file name of .lua file. 
-# This name will be the environment name that you would like to see on Puhti web interface. In the ".lua" file, 
+# (i.e., coursename.lua) is a module environment file. In the ".lua" file, 
 # you can set the absolute path for bin directory (where you would  have installed all the python packages using tykky),
 # configure path for notebook URL (i.e., the notebook that you would like to see ater opening Jupyter notebook) and  optional
 # source path for extra material (source path is where you download extra matrial on scratch area and refer to the path 
