@@ -12,7 +12,7 @@ After this tutorial, you will learn to:
 
 ### Converting a local docker image to Apptainer
 
-1. Let's use the same trimmomatic software example we have used in the previous tutorial. <a href="http://labs.play-with-docker.com/" target="_blank"> In PWD terminal</a>, run the following command to pull an image:
+1. Let's use trimmomatic software as an example. Trimmomatic software is a flexible read trimming tool for Illumina NGS data. <a href="http://labs.play-with-docker.com/" target="_blank"> In PWD terminal</a>, run the following command to pull an image:
 
    ```bash
     docker pull quay.io/biocontainers/trimmomatic:0.32--hdfd78af_4
