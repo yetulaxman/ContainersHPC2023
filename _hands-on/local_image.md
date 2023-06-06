@@ -3,7 +3,7 @@ topic: docker
 title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
-This tutorial explains how to build a singularity/Apptainer image on HPC systems from a local docker image. In reality, existing docker images may not be suitable for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. 
+This tutorial explains how to build a singularity/Apptainer image on HPC systems from a local docker image. In reality, existing docker images may not be suitable for our purpose. And hence, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. 
 
 ###  Expected outcome of this tutorial:
 After this tutorial, you will learn to:
