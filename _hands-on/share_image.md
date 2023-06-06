@@ -35,7 +35,7 @@ This exercise requires a workstation with docker client installed and thus can't
    terminal. Once we have container id, you are ready to commit the changes as shown below:
 
    ```bash
-   docker ps -a
+   docker ps -a  # check for the container id of running fastqc container
    docker commit <container id> fastqc-vim:test   # docker commit 6527b0394bdf  fastqc-vim:test
    ```
    
