@@ -37,7 +37,7 @@ After this tutorial, you will learn to:
 4. Copy the image tarball from PWD to your **scratch* folder on Puhti 
 
    ```  
-   scp trimmomatic_image.tar YOURCSCUSERNAME@puhti.csc.fi:/scratch/project_xxx/YOURCSCUSERNAME
+   scp trimmomatic_image.tar YOURCSCUSERNAME@puhti.csc.fi:/scratch/project_xxx/YOURCSCUSERNAME  # replace `project_xxxx` with a valid project number 
    ```
 
 5. Build Apptainer image from the tarball. 
