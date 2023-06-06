@@ -30,7 +30,7 @@ Start by downloading ssh key:
 wget https://a3s.fi/saren-2001659-pub/key.zip
 ```
 
-Uncompress the file. When prompted, enter password `Course23`
+Uncompress the file. When prompted, enter password. Password provided in zoom chat.
 
 ```bash
 unzip key.zip
