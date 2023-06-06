@@ -8,7 +8,7 @@ This tutorial explains how to build a singularity/Apptainer image on HPC systems
 ###  Expected outcome of this tutorial:
 After this tutorial, you will learn to:
 - Prepare a docker image and save it locally 
-- Launch an Apptainer container from a local docker image 
+- Launch an Apptainer container on Puhti from a local docker image 
 
 ### Converting a local docker image to Apptainer
 
