@@ -42,20 +42,6 @@ You can now use the key to login to the build system. Instead of "courseXX" use 
 ssh courseXX@86.50.230.250 -i container-course
 ```
 
-Start by moving to work disk area and create a directory for yourself:
-
-```bash
-cd /media/volume
-mkdir <username>
-```
-
-To avoid filling up the home directories, set `$APPTAINER_TMPDIR` and `$APPTAINER_CACHEDIR`  to your working directory:
-
-```bash
-export APPTAINER_TMPDIR=$LOCAL_SCRATCH
-export APPTAINER_CACHEDIR=
-```
-
 
 ## 2. Creating a definition file
 
