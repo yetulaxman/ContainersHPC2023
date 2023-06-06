@@ -3,16 +3,16 @@ topic: docker
 title: Tutorial2 -  Using local Docker images as HPC applications 
 ---
 
-This tutorial explains how to build a singularity image on HPC systems from a local docker image. In reality, existing docker images may not be suitable for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. 
+This tutorial explains how to build a singularity/Apptainer image on HPC systems from a local docker image. In reality, existing docker images may not be suitable for our purpose. In that case, we have to either modify an existing docker image or build a new one. Unfortunately, the docker-related operations can only be done on our local machines or any host machine where we have privileged root access. 
 
 ###  Expected outcome of this tutorial:
 After this tutorial, you will learn to:
-- Save a docker image locally 
-- Launch a singularity container from a local docker image 
+- Prepare and save a docker image locally 
+- Launch an Apptainer container from a local docker image 
 
 ### Converting a local docker image to Apptainer
 
-1. Let's use [trimmomatic software](http://www.usadellab.org/cms/?page=trimmomatic) which is a flexible read trimming tool for Illumina NGS data as available in from [Quay Registry](https://quay.io). Visit the webpage of Quay registry and search for the trimmomatic image (using keyword: trimmomatic) on the top right hand corner. You can find the trimmomaticimages from different repositories/accounts. Pick the one under biocontainer repository (i.e., biocontainers/trimmomatic). And also search for different tags available for the image (hint: on the left side menu, click on *tags* icon). Once you managed to find a fully qualified URI (= docker://hostname/repository/imagename:tag) for docker image, use <a href="http://labs.play-with-docker.com/" target="_blank"> In PWD terminal</a>, run the following command to pull an image (here use tag:0.32--hdfd78af_4):
+1. Let's use [trimmomatic software](http://www.usadellab.org/cms/?page=trimmomatic), which is a flexible read trimming tool for Illumina NGS data, as available in [Quay Registry](https://quay.io). Visit the webpage of Quay registry and search for the trimmomatic image (using keyword: trimmomatic) on the top right hand corner. You can find the trimmomatic images from different repositories/accounts. Pick the one under biocontainer repository (i.e., biocontainers/trimmomatic). And also search for different tags available for the image (hint: on the left side menu, click on *tags* icon) and pick one tag from the list. Once you managed to find a fully qualified URI (i.e., hostname/repository/imagename:tag) for docker image, use <a href="http://labs.play-with-docker.com/" target="_blank"> In PWD terminal</a>, run the following command to pull an image with your own tag (here example is with tag: 0.32--hdfd78af_4):
 
    ```bash
     docker pull quay.io/biocontainers/trimmomatic:0.32--hdfd78af_4
@@ -27,7 +27,7 @@ After this tutorial, you will learn to:
    ```
    From the above command, you need to find an image ID (this is unique to you) of trimmomatic image to save it locally. 
   
-3. Create a tarball of the Docker image (with image id as cc8b303fee58)  using the **docker save** command as below:
+3. Create a tarball of the Docker image (with image id as cc8b303fee58 which would be different for you)  using the **docker save** command as below:
   
    ```bash
    docker save cc8b303fee58 -o trimmomatic_image.tar  # in this case image_id is : cc8b303fee58
@@ -40,14 +40,14 @@ After this tutorial, you will learn to:
    scp trimmomatic_image.tar YOURCSCUSERNAME@puhti.csc.fi:/scratch/project_xxx/YOURCSCUSERNAME
    ```
 
-5. Build Singularity image from the tarball. 
+5. Build Apptainer image from the tarball. 
  
     ```bash
     cd /scratch/project_xxxx/YOURCSCUSERNAME  # replace `project_xxxx` with a valid project number 
     apptainer build local_trimmomatic_image.sif docker-archive://trimmomatic_image.tar
     ```
   
-6. Launch singularity container and check if you can get a command-line help for trimmomatic software
+6. Launch Apptainer container and check if you can get a command-line help for trimmomatic software
 
     ```bash
    apptainer exec local_trimmomatic_image.sif trimmomatic --help
