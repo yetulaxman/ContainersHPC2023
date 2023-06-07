@@ -171,6 +171,25 @@ If the build finishes, try it:
 apptainer exec macs3.sif macs3 --help
 ```
 
+In this case there will be an error message about MACS3 package not being found. 
+
+This is a good reminder that even if build finishes there could be problems with the container, so you should always test.
+
+You can first try setting `$PYTHONPATH` inside the container and try again:
+
+```bash
+export APPTAINERENV_PYTHONPATH=/usr/lib/python3.8/site-packages
+apptainer exec macs3.sif macs3 --help
+```
+
+To make the fix permanent you can add `%environment` section to the definition file:
+
+```text
+%environment
+  export PYTHONPATH=/usr/lib/python3.8/site-packages
+```
+
+
 #### 2.3.3 Setting up the environment
 
 Any commands that set up the environment go to the `%environment` section.
@@ -209,7 +228,7 @@ or using variable `$APPTAINER_ENVIRONMENT` in %post, instead of relying on any f
 You can try this definition file as above:
 
 ```bash
-apptaine build --fakeroot macs3.sif macs3.def
+apptainer build --fakeroot macs3.sif macs3.def
 ```
 
 If the build finishes, try it:
