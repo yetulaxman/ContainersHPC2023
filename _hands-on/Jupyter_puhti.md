@@ -30,9 +30,7 @@ cd /scratch/project_xxxx/      # Make sure to replace project_xxxx with correct 
 # As a starting point, you can download all necessary template files for the 
 # customising course environment from allas object storage (as shown below). 
 # The downloaded template files include a module environment file namely,  NMRLipids-course.lua 
-#  where you can change the settings such as the absolute path for bin directory (where you would  
-# have installed all the python packages using tykky), notebook path and  
-# source path for downloading extra material
+#  and resource specifications file, NMRLipids-course-resources.yaml files. You can find more information about these files later.
 
 wget https://a3s.fi/CSC_training/Puhti_web_helper.tar.gz && tar -xavf Puhti_web_helper
 cd Puhti_web_helper
@@ -67,7 +65,7 @@ As the name of the ".lua" file will appear as custom notebook environment on Puh
 
 ```
 cd /projappl/project_xxxx/www_puhti_modules
-# add your real CSC username in .lua and .yaml file names
+# add your CSC username in .lua and .yaml file names
 mv  NMRLipids-course-resources.yml  NMRLipids-course-yourcscusername-resources.yml
 mv  NMRLipids-course.lua  NMRLipids-course-yourcscusername.lua 
 ```
@@ -77,11 +75,11 @@ mv  NMRLipids-course.lua  NMRLipids-course-yourcscusername.lua
 1. Log in to [Puhti web interface](https://www.puhti.csc.fi)
 2. Login with CSC/HAKA/VIRTU credentials (Users should have accepted Puhti service in [myCSC](https://my.csc.fi/welcome) 
    page under a course (or own) project before using this service). 
-3. Once login is successful, select "Interactive Sessions" on the top menu bar and then click "Jupyter for courses". 
- On the right-hand side you can see the different fields for filling in before launching as a batch job. For this course, select 
- the "Project" and "Working directory" corresponding to course project. Then you will be able to see "NMRLipids-course-yourcscusername" 
+3. Once login is successful, select "Interactive Sessions" icon on the top menu bar and then click "Jupyter for courses". 
+ you can then see the different fields for filling in before launching as a batch job. First select 
+ the "Project" and "Working directory" and then you will be able to see "NMRLipids-course-yourcscusername" 
  module under the "Course module" field. You can then launch Jupyter notebook which will be launched in the 
- interactive partition by default. You can also change the default settings by checking "Show custom resource settings".
+ interactive partition. You can also change the default settings by checking "Show custom resource settings".
 4. Upon successful launching a job, you can click on "Connect to Jupyter" to see the course notebook corresponding to 
   your course environment.
 
