@@ -32,7 +32,7 @@ cd /scratch/project_xxxx/      # Make sure to replace project_xxxx with correct 
 # The downloaded template files include a module environment file namely,  NMRLipids-course.lua 
 #  and resource specifications file, NMRLipids-course-resources.yaml files. You can find more information about these files later.
 
-wget https://a3s.fi/CSC_training/Puhti_web_helper.tar.gz && tar -xavf Puhti_web_helper
+wget https://a3s.fi/CSC_training/Puhti_web_helper.tar.gz && tar -xavf Puhti_web_helper.tar.gz
 cd Puhti_web_helper
 module load tykky
 mkdir -p /projappl/project_xxxx/$USER and mkdir -p /projappl/project_xxxx/$USER/NMRLipids  
