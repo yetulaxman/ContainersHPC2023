@@ -25,7 +25,7 @@ for Jupyter notebook. Please install all needed computing environment in the *pr
 Install python packages for course using tykky wrapper as below:
 ```bash
 # Navigate to the scratch area of your course project 
-cd /scratch/project_xxxx/      # Make sure to replace project_xxxx with correct roject number
+cd /scratch/project_xxxx/      # Make sure to replace project_xxxx with correct project number
 
 # As a starting point, you can download all necessary template files for the 
 # customising course environment from allas object storage (as shown below). 
