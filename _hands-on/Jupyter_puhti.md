@@ -25,10 +25,10 @@ for Jupyter notebook. Please install all needed computing environment in the *pr
 Install python packages for course using tykky wrapper as below:
 ```bash
 # Navigate to the scratch area of your course project 
-cd /scratch/project_xxxx/      # Make sure to replace the correct project number here
+cd /scratch/project_xxxx/      # Make sure to replace project_xxxx with correct roject number
 
 # As a starting point, you can download all necessary template files for the 
-# customising course environment from allas object storage storage (as shown below). 
+# customising course environment from allas object storage (as shown below). 
 # The downloaded template files include a module environment file namely,  NMRLipids-course.lua 
 #  where you can change the settings such as the absolute path for bin directory (where you would  
 # have installed all the python packages using tykky), notebook path and  
