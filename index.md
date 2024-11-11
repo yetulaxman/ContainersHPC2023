@@ -19,7 +19,7 @@ author: CSC Training
 
 ## 2. Apptainer containers
 ### Slides: [Using containers in HPC environment](https://a3s.fi/biocontainers2023/Basic_usage_of_Apptainer.html)
-### Slides: [Building singularity container images](https://a3s.fi/biocontainers2023/Buiding_container_images.html)
+### Slides: [Building Apptainer container images](https://a3s.fi/biocontainers2023/Buiding_container_images.html)
 
 ###  Tutorials and exercises
 {% for hands-on in items %}
