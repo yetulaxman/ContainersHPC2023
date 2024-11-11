@@ -7,7 +7,7 @@ title: Tutorial2 - Tykky container wrapper
 - You have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/).
 - Your account belongs to a project [that has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 
-If you are new to CSC supercomputers, please check more on how to [login to Puhti Supercmputer](https://yetulaxman.github.io/ContainersHPC2023/hands-on/ssh-puhti.html)
+If you are new to CSC supercomputers, please check more on how to [login to Puhti Supercomputer](https://yetulaxman.github.io/ContainersHPC2023/hands-on/ssh-puhti.html)
 
 # Tykky container wrapper
 
